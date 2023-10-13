@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["Caio Augusto Palma <caio.palma@fatec.sp.gov.br>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+uvicorn = {extras = ["standard"], version = "^0.23.2"}
+fastapi = "^0.103.1"
+pyzbar = "^0.1.9"
+pillow = "^10.0.0"
+python-multipart = "^0.0.6"
+pytesseract = "^0.3.10"
+playwright = "^1.38.0"
+pydantic = "^2.3.0"
+pdf2image = "^1.16.3"
+asyncio = "^3.4.3"
+fastapi-cache = "^0.1.0"
+
+[tool.poetry.scripts]
+dev = "app.__init__:start(['--devmode'])"
+prod = "app.__init__:start()"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

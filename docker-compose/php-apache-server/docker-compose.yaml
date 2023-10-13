@@ -1,0 +1,11 @@
+services:
+  server:
+    build: .
+    ports:
+    - '8080:80'
+    volumes:
+    - ./php/src:/var/www/html/
+    - ./php/config:/usr/local/etc/php/
+    
+    # rm /etc/apt/preferences.d/no-debian-php 
+    # apt-get update -yqq && apt-get install php-soap
